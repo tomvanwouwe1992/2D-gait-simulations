@@ -205,9 +205,10 @@ q2_sol = sol.value(q2);
 q3_sol = sol.value(q3);
 q4_sol = sol.value(q4);
 q5_sol = sol.value(q5);
+relativeJointPos = relativeJointPos(q1_sol,q2_sol,q3_sol,q4_sol,q5_sol);
 figure(2)
-plot(time,180/pi*q1_sol,time,180/pi*q2_sol,time,180/pi*q3_sol,time,180/pi*q4_sol,time,180/pi*q5_sol);
-legend('stance tib','stance fem','trunk','swing fem','swing tib');
+plot(time,180/pi*relativeJointPos(1,:),time,180/pi*relativeJointPos(2,:),time,180/pi*relativeJointPos(3,:),time,180/pi*relativeJointPos(4,:),time,180/pi*relativeJointPos(5,:));
+legend('stance ankle','stance knee','stance hip','swing hip','swing knee');
 xlabel(['time [s]'])
 ylabel(['segment pos [°]'])
 
@@ -216,9 +217,10 @@ dq2_sol = sol.value(dq2);
 dq3_sol = sol.value(dq3);
 dq4_sol = sol.value(dq4);
 dq5_sol = sol.value(dq5);
+relativeJointVel = relativeJointVel(dq1_sol,dq2_sol,dq3_sol,dq4_sol,dq5_sol);
 figure(3)
-plot(time,180/pi*dq1_sol,time,180/pi*dq2_sol,time,180/pi*dq3_sol,time,180/pi*dq4_sol,time,180/pi*dq5_sol);
-legend('stance tib','stance fem','trunk','swing fem','swing tib');
+plot(time,180/pi*relativeJointVel(1,:),time,180/pi*relativeJointVel(2,:),time,180/pi*relativeJointVel(3,:),time,180/pi*relativeJointVel(4,:),time,180/pi*relativeJointVel(5,:));
+legend('stance ankle','stance knee','stance hip','swing hip','swing knee');
 xlabel(['time'])
 ylabel(['segment vel [°]'])
 
