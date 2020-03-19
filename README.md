@@ -10,3 +10,6 @@ The stance 'foot' is fixed to the ground and the gait pattern is imposed to have
 - If you run the 'main' function you will see how the minimial torque walking pattern looks like. There are some options to restrict the gait pattern and look at the effects of for example ('walking without knee muscles'). You can uncomment these and run to observe the effects. The optimization to generate the gait pattern should take between 1s-2s depending on the performance of your computer.
 
 - The functions to generate the equations of motion and heel-strike map constraint (to have a consistent periodic gait) are included ('generateEOM.m'). 
+
+- The integration scheme is implemented as a backward Euler scheme:: x_k+1 = x_k + f(x_k+1)dt with f(x) = xdot.
+
