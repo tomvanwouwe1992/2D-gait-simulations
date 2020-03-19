@@ -175,7 +175,6 @@ opti.minimize(J);
 
 % Create an NLP solver
 optionssol.ipopt.linear_solver = 'mumps';
-optionssol.ipopt.tol = 1e-2;
 optionssol.ipopt.constr_viol_tol = 1e-10;
 optionssol.ipopt.dual_inf_tol = 1e-8;
 optionssol.ipopt.compl_inf_tol = 1e-6;
