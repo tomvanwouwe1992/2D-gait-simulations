@@ -1,6 +1,8 @@
 # 2D-gait
 Generate optimal torque driven 2-D gait simulations in below 5s using direct collocation.
 
+NOTE: Running the code requires installation of CasADi (https://web.casadi.org/).
+
 - The model is based on the one presented in "An Introduction to Trajectory Optimization: How to Do Your Own Direct Collocation" by Matthew Kelly. (SIAM Review, Vol. 59, No. 4, pp. 849-904)
 - The model exists of 5 segments (2 tibia, 2 femur and trunk) and driven by ankle, knee and hip torques.
 The stance 'foot' is fixed to the ground and the gait pattern is imposed to have no double stance and no flight phase avoiding the implementation of different phases and/or contact models.
